@@ -7,3 +7,15 @@
 // Sour Punch Straws
 // Kit Kats
 // Reese's Cups
+fetch("http://localhost:3000/candies")
+.then(r => r.json())
+.then(data => {
+data.forEach(candy=>{
+    console.log (candy.name)}
+        )
+    }       
+)
+
+
+
+
