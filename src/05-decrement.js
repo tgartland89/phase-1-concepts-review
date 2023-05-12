@@ -4,4 +4,17 @@
 
 // When the countdown hits 0, remove the button from the page
 
-const countdownButton = document.querySelector('#countdown-button')
+let countdownButton = document.querySelector('#countdown-button')
+let count = 10;
+
+countdownButton.addEventListener('click', () => {
+  count--;
+
+  if (count >= 0) {
+    countdownButton.textContent = count;
+  }
+
+  if (count === 0) {
+    countdownButton.remove();
+  }
+});
